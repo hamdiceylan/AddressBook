@@ -19,7 +19,6 @@ var PortalSchema = new Schema({
 	website: {
 		type: String,
 		default: '',
-		required: 'Please fill website name',
 		trim: true
 	},
 	created: {

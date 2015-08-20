@@ -7,21 +7,20 @@ angular.module('portals').controller('PortalsController', ['$scope', '$statePara
 
 		// Create new Portal
 		$scope.create = function() {
-			console.log(this);
-			console.log(this.website);
+			debugger;
 			// Create new Portal object
-			var portal = new Portals ({
+			var portal = new Object ({
 				name: this.name,
-				website : this.website
+				site : this.site
 			});
-
+			console.log(portal);
 			// Redirect after save
 			portal.$save(function(response) {
 				$location.path('portals/' + response._id);
 
 				// Clear form fields
 				$scope.name = '';
-				$scope.website = '';
+				$scope.site = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

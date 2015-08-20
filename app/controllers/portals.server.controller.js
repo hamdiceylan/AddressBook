@@ -13,8 +13,9 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var portal = new Portal(req.body);
+	console.log(req);
 	portal.user = req.user;
-	portal.website = req.website;
+	portal.site = req.site;
 
 	portal.save(function(err) {
 		if (err) {

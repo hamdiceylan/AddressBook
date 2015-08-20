@@ -38,7 +38,8 @@ describe('Portal CRUD tests', function() {
 		// Save a user to the test db and create new Portal
 		user.save(function() {
 			portal = {
-				name: 'Portal Name'
+				name: 'Portal Name',
+				website : 'Site Name'
 			};
 
 			done();
