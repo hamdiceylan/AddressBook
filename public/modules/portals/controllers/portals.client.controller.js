@@ -46,7 +46,7 @@ angular.module('portals').controller('PortalsController', ['$scope', '$statePara
 		// Update existing Portal
 		$scope.update = function() {
 			var portal = $scope.portal;
-
+			console.log("update" + portal);
 			portal.$update(function() {
 				$location.path('portals/' + portal._id);
 			}, function(errorResponse) {
